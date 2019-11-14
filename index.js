@@ -37,44 +37,6 @@ router.get("/", function(req, res, next) {
 });
 
 });
-
-router.get("/", function(req, res, next) {
-  db.collection("Movies").find({"_id":2}, function(err, docs) {
-  
-   if(err) return next(err);
-    docs.each(function(err, doc) {
-      if(doc) {
-       res.json(doc);
-        }
-      //  res.json(JSON.stringify(docs)); 
-   
-  
-  
-});
-
-  
-});
-
-});
-router.get("/", function(req, res, next) {
-  db.collection("Movies").find({"_id":3}, function(err, docs) {
-  
-   if(err) return next(err);
-    docs.each(function(err, doc) {
-      if(doc) {
-       res.json(doc);
-        }
-      //  res.json(JSON.stringify(docs)); 
-   
-  
-  
-});
-
-  
-});
-
-});
-
 app.use('/',router);
 
 app.listen(3000);
